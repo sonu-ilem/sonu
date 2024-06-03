@@ -1,6 +1,8 @@
 "use client"
 import Link from 'next/link';
 import { CgGitFork } from "react-icons/cg";
+import { BsGithub } from "react-icons/bs";
+
 import { IoStar } from "react-icons/io5";
 import React, { useState, useEffect } from "react";
 
@@ -19,36 +21,8 @@ function Footer() {
   }
   return (
     <div className="relative border-t bg-[#0d1224] border-[#353951] text-white">
-      {/* <div className="mx-auto px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem] py-6 lg:py-10">
-        <div className="flex justify-center -z-40">
-          <div className="absolute top-0 h-[1px] w-1/2  bg-gradient-to-r from-transparent via-violet-500 to-transparent"></div>
-        </div>
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <p className="text-sm">
-            © Developer Portfolio by <Link target="_blank" href="https://www.linkedin.com/in/abu-said-bd/" className="text-[#16f2b3]">Abu Said</Link>
-          </p>
-          <div className="flex items-center gap-5">
-            <Link
-              target="_blank"
-              href="https://github.com/said7388/developer-portfolio"
-              className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
-            >
-              <IoStar />
-              <span>Star</span>
-            </Link>
-            <Link
-              target="_blank"
-              href="https://github.com/said7388/developer-portfolio/fork"
-              className="flex items-center gap-2 uppercase hover:text-[#16f2b3]"
-            >
-              <CgGitFork />
-              <span>Fork</span>
-            </Link>
-          </div>
-        </div>
-      </div> */}
-      <div className="flex flex-col gap-3 pb-4 pt-16 md:pt-0">
-        <hr style={{ borderTop: '1px solid black' }} />
+      <div className="flex flex-col gap-3 pb-4 md:pt-0">
+        <hr style={{ borderTop: '1px solid blue' }} />
         <ul className="socialIcons flex justify-center gap-4">
           <li>
             <svg
@@ -70,7 +44,14 @@ function Footer() {
             </svg>
           </li>
           <li>
-            <svg
+          <Link
+              href={"/github"}
+              target="_blank"
+              className="transition-all text-white hover:scale-125 duration-300"
+            >
+              <BsGithub size={25} />
+            </Link>
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
@@ -79,7 +60,7 @@ function Footer() {
               viewBox="0 0 50 50"
             >
               <path d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2 c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,30,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"></path>
-            </svg>
+            </svg> */}
           </li>
           <li>
             <svg
@@ -97,7 +78,7 @@ function Footer() {
             </svg>
           </li>
         </ul>
-        <div className="copyWrite flex justify-center text-gray-500 text-sm">
+        <div className="copyWrite flex justify-center text-white text-sm">
           &copy; {currentYear} Sonu Kumar. All rights reserved.
         </div>
       </div>
